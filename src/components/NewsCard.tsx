@@ -53,7 +53,7 @@ interface NewsCardProps {
 
 const NewsCard: React.FC<NewsCardProps> = ({
   data,
-  showDuplicates = false,
+  // showDuplicates = false,
 }) => {
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
