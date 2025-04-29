@@ -1,0 +1,223 @@
+.news-card {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  box-shadow: var(--card-shadow);
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+
+  .news-card-header {
+    position: relative;
+    margin-bottom: 12px;
+    padding-right: 80px;
+
+    .news-meta {
+      font-size: 12px;
+      color: var(--text-secondary);
+
+      .ant-space-item {
+        display: flex;
+        align-items: center;
+        color: inherit;
+      }
+    }
+
+    .sentiment-tag {
+      display: flex;
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      .ant-tag {
+        font-size: 12px;
+        padding: 0 6px;
+        border-radius: 2px;
+        line-height: 20px;
+        margin: 0;
+      }
+    }
+  }
+
+  .news-card-header-clone {
+    @extend .news-card-header;
+
+    .news-meta-clone {
+      font-size: 12px;
+      color: var(--text-secondary);
+
+      .ant-space-item {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
+  .news-content {
+    .news-title {
+      margin-bottom: 8px;
+      font-weight: 500;
+      line-height: 1.4;
+      color: var(--text-primary);
+
+      a {
+        color: var(--link-color);
+        &:hover {
+          color: var(--link-hover);
+        }
+      }
+    }
+
+    .news-source {
+      display: flex;
+      align-items: center;
+      margin-bottom: 6px;
+      font-size: 13px;
+      color: var(--text-secondary);
+
+      .ant-avatar {
+        margin-right: 5px;
+      }
+
+      .news-domain {
+        margin-right: 15px;
+        color: var(--text-primary);
+      }
+
+      .news-language {
+        font-size: 20px;
+      }
+    }
+
+    .news-authors {
+      font-size: 12px;
+      color: var(--text-secondary);
+      margin-bottom: 12px;
+    }
+
+    .news-abstract {
+      color: var(--text-primary);
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 12px;
+    }
+
+    .news-highlights {
+      background-color: var(--highlight-bg);
+      padding: 8px 12px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+      transition: background-color 0.3s;
+
+      .highlight-text {
+        color: var(--text-primary);
+        font-size: 13px;
+        margin-bottom: 4px;
+      }
+
+      .show-more-link {
+        font-size: 20px;
+        color: var(--link-color);
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        &:hover {
+          color: var(--link-hover);
+        }
+      }
+    }
+
+    .highlight-word {
+      color: var(--highlight-text);
+      font-weight: bold;
+      background-color: var(--highlight-color);
+      font-size: 12px;
+      padding: 2px 8px;
+      border-radius: 6px;
+      border: none;
+    }
+
+    .news-tags {
+      margin-top: 12px;
+
+      .news-tag {
+        background-color: var(--tag-bg);
+        border: none;
+        color: var(--tag-text);
+        font-size: 12px;
+        padding: 2px 8px;
+        border-radius: 10px;
+      }
+
+      .show-all-tags {
+        font-size: 12px;
+        color: var(--link-color);
+        margin-left: 8px;
+        &:hover {
+          color: var(--link-hover);
+        }
+      }
+    }
+  }
+
+  .news-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border-color);
+    font-size: 12px;
+    margin-bottom: 10px;
+    color: var(--text-secondary);
+
+    .duplicates-info {
+      color: var(--text-secondary);
+    }
+
+    .view-duplicates {
+      color: var(--link-color);
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      &:hover {
+        color: var(--link-hover);
+      }
+    }
+  }
+}
+
+// CSS переменные для тем
+:root {
+  /* Светлая тема */
+  --text-primary: #222222;
+  --text-secondary: #666666;
+  --card-bg: #ffffff;
+  --border-color: #f0f0f0;
+  --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --link-color: #1890ff;
+  --link-hover: #40a9ff;
+  --highlight-bg: #f8f8f8;
+  --highlight-color: #1e8af5;
+  --highlight-text: #ffffff;
+  --tag-bg: #f0f0f0;
+  --tag-text: #555555;
+}
+
+[data-theme="dark"] {
+  /* Темная тема */
+  --text-primary: #f0f0f0;
+  --text-secondary: #aaaaaa;
+  --card-bg: #1e1e1e;
+  --border-color: #333333;
+  --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --link-color: #40a9ff;
+  --link-hover: #69c0ff;
+  --highlight-bg: #2a2a2a;
+  --highlight-color: #1e8af5;
+  --highlight-text: #ffffff;
+  --tag-bg: #333333;
+  --tag-text: #dddddd;
+}
